@@ -29,6 +29,7 @@ namespace HangmanGame
             bool gameover = false;
             string[] words = { "bruh", "poggers" };
             Random random = new Random();
+            int x = RandomNumber();
             string chosenWord = words[x];
             char[] word = chosenWord.ToCharArray();
 
