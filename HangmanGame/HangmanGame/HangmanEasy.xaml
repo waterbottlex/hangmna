@@ -1,0 +1,44 @@
+﻿<Page x:Name="A" x:Class="HangmanGame.HangmanEasy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HangmanGame"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="DarkGray"
+      Title="HangmanEasy">
+
+    <Grid>
+        <Image Source="Images\generichangman.png" Height="200" Width="240" HorizontalAlignment="Left" Margin="480,27,0,223"></Image>
+        <Button Content="A" Height ="55" Width="40" Click="aClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,400,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button  Content="B" Height ="55" Width="40" Click="bClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,300,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="C" Height ="55" Width="40" Click="cClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,200,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="D" Height ="55" Width="40" Click="dClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,100,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="E" Height ="55" Width="40" Click="eClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="F" Height ="55" Width="40" Click="fClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="100,250,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="G" Height ="55" Width="40" Click="gClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="200,250,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="H" Height ="55" Width="40" Click="hClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="300,250,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="I" Height ="55" Width="40" Click="iClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="400,250,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+
+        <Button Content="J" Height ="55" Width="40" Click="jClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,310,360,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="K" Height ="55" Width="40" Click="kClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,310,260,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="L" Height ="55" Width="40" Click="lClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,310,160,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="M" Height ="55" Width="40" Click="mClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,310,60,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="N" Height ="55" Width="40" Click="nClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="60,310,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="O" Height ="55" Width="40" Click="oClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="160,310,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="P" Height ="55" Width="40" Click="pClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="260,310,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="Q" Height ="55" Width="40" Click="qClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="360,310,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+
+        <Button Content="R" Height ="55" Width="40" Click="rClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,370,400,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="S" Height ="55" Width="40" Click="sClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,370,300,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="T" Height ="55" Width="40" Click="tClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,370,200,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="U" Height ="55" Width="40" Click="uClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,370,100,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="V" Height ="55" Width="40" Click="vClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,370,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="W" Height ="55" Width="40" Click="wClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="100,370,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="X" Height ="55" Width="40" Click="xClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="200,370,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="Y" Height ="55" Width="40" Click="yClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="300,370,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Button Content="Z" Height ="55" Width="40" Click="zClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="400,370,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+
+
+    </Grid>
+</Page>
