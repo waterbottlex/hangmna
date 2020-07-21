@@ -39,8 +39,6 @@ namespace HangmanGame
                 if(wrongGuesses == 7)
                 {
                     gameover = true;
-                    System.Windows.Application.Current.Shutdown();
-
                 }
 
                 win = CheckWin(word, guesses);
