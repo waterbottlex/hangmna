@@ -29,7 +29,6 @@ namespace HangmanGame
             bool gameover = false;
             string[] words = { "bruh", "poggers" };
             Random random = new Random();
-            int x = random.Next(0, 2);
             string chosenWord = words[x];
             char[] word = chosenWord.ToCharArray();
 
@@ -40,7 +39,14 @@ namespace HangmanGame
 
         }
 
-        private void Guess(char a, char[] arr)
+        private int RandomNumber()
+        {
+            Random r = new Random();
+            int x = r.Next(0, 2);
+            return x;
+        }
+
+        private void CheckGuess(char a, char[] arr)
         {
             
         }
