@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HangmanGame
 {
@@ -18,241 +10,246 @@ namespace HangmanGame
     /// </summary>
     public partial class HangmanEasy : Page
     {
-        
-        public int wrongGuesses = 0;
-        public char[] guesses = new char[26];
-        public char[] word;
-        
+        public static char[] guesses = new char[26];
+        public static string[] words = { "bruh", "bruh" };
+        public static int x = RandomNumber();
+        public static string chosenWord = words[x];
+        public char[] word = chosenWord.ToCharArray();
+
         public HangmanEasy()
         {
             InitializeComponent();
-            bool win = false;
-            bool gameover = false;
-            string[] words = { "bruh", "poggers" };
-            Random random = new Random();
-            int x = RandomNumber();
-            string chosenWord = words[x];
-            word = chosenWord.ToCharArray();
+            
 
-            while (win == false && gameover == false)
+            for(int i = 0; i< guesses.Length;i++)
             {
-                if(wrongGuesses == 7)
-                {
-                    gameover = true;
-                    System.Windows.Application.Current.Shutdown();
-
-                }
-
-                win = CheckWin(word, guesses);
+                guesses[i] = '.';
             }
-
         }
 
-        private int RandomNumber()
+
+        private static int RandomNumber()
         {
             Random r = new Random();
             int x = r.Next(0, 2);
             return x;
         }
 
-        private void CheckGuess(char a, char[] arr)
+        private void CheckGame(char[] guesses, char[] word)
         {
-            bool containsGuess = false;
-            for (int i = 0; i < arr.Length; i++)
+            int wrongGuesses = 0;
+            for (int i = 0; i <guesses.Length;i++)
             {
-                if (a == arr[i])
+                if (guesses[i] != '.')
                 {
-                    containsGuess = true;
+                    bool notinword = false;
+
+                    for (int j = 0; j < word.Length; j++)
+                    {
+                        if(guesses[i] == word[j])
+                        {
+                            notinword = true;
+                        }
+                    }
+
+                    if (notinword == false)
+                    {
+                        wrongGuesses += 1;
+                    }
                 }
             }
-            if (!containsGuess)
-            {
-                wrongGuesses += 1;
-            }
-        }
 
-        private bool CheckWin(char[] x, char[]y)
-        {
-            bool[] letters = new bool[x.Length];
-            for (int i = 0; i< x.Length;i++)
+            bool[] correctGuesses = new bool[word.Length];
+
+            for (int i = 0; i < word.Length; i++)
             {
-                for(int j = 0;j<y.Length;j++)
+                for(int j = 0; j < guesses.Length; j++)
                 {
-                    if (x[i] == y[j])
-                    {
-                        letters[i] = true;
+                    if (word[i] == guesses[j]){
+                        correctGuesses[i] = true;
                     }
                 }
             }
 
             bool win = true; ;
-
-            for(int i =0; i< x.Length; i++)
+            for(int i = 0; i < correctGuesses.Length; i++)
             {
-                if (letters[i] == false)
-                {
+                if(correctGuesses[i] == false){
                     win = false;
                 }
             }
-            return win;
+            if (win)
+            {
+                pog.Source = new BitmapImage(new Uri("/Images/smily.png", UriKind.Relative));
+            }
+
+            if(wrongGuesses == 7)
+            {
+                pog.Source = new BitmapImage(new Uri("/Images/dead.png", UriKind.Relative));
+            }
+
+
         }
 
         private void aClick(object sender, RoutedEventArgs e)
         {
             guesses[0] = 'a';
-            CheckGuess('a', word);
+            CheckGame(guesses, word);
+            AButton.Visibility = Visibility.Collapsed;
+
+
         }
 
         private void bClick(object sender, RoutedEventArgs e)
         {
             guesses[1] = 'b';
-            CheckGuess('b', word);
+            CheckGame(guesses, word);
 
         }
         private void cClick(object sender, RoutedEventArgs e)
         {
             guesses[2] = 'c';
-            CheckGuess('c', word);
+            CheckGame(guesses, word);
 
         }
         private void dClick(object sender, RoutedEventArgs e)
         {
             guesses[3] = 'd';
-            CheckGuess('d', word);
+            CheckGame(guesses, word);
 
         }
         private void eClick(object sender, RoutedEventArgs e)
         {
             guesses[4] = 'e';
-            CheckGuess('e', word);
+            CheckGame(guesses, word);
 
         }
         private void fClick(object sender, RoutedEventArgs e)
         {
             guesses[5] = 'f';
-            CheckGuess('f', word);
+            CheckGame(guesses, word);
 
         }
         private void gClick(object sender, RoutedEventArgs e)
         {
             guesses[6] = 'g';
-            CheckGuess('g', word);
+            CheckGame(guesses, word);
         }
 
         private void hClick(object sender, RoutedEventArgs e)
         {
             guesses[7] = 'h';
-            CheckGuess('h', word);
+            CheckGame(guesses, word);
 
         }
         private void iClick(object sender, RoutedEventArgs e)
         {
             guesses[8] = 'i';
-            CheckGuess('i', word);
 
+            CheckGame(guesses, word);
         }
         private void jClick(object sender, RoutedEventArgs e)
         {
             guesses[9] = 'j';
-            CheckGuess('j', word);
 
+            CheckGame(guesses, word);
         }
 
         private void kClick(object sender, RoutedEventArgs e)
         {
             guesses[10] = 'k';
-            CheckGuess('k', word);
+            CheckGame(guesses, word);
 
         }
         private void lClick(object sender, RoutedEventArgs e)
         {
             guesses[11] = 'l';
-            CheckGuess('l', word);
+            CheckGame(guesses, word);
 
         }
         private void mClick(object sender, RoutedEventArgs e)
         {
             guesses[12] = 'm';
-            CheckGuess('m', word);
+            CheckGame(guesses, word);
 
         }
         private void nClick(object sender, RoutedEventArgs e)
         {
             guesses[13] = 'n';
-            CheckGuess('n', word);
+            CheckGame(guesses, word);
 
         }
         private void oClick(object sender, RoutedEventArgs e)
         {
             guesses[14] = 'o';
-            CheckGuess('o', word);
+            CheckGame(guesses, word);
 
         }
         private void pClick(object sender, RoutedEventArgs e)
         {
             guesses[15] = 'p';
-            CheckGuess('p', word);
+            CheckGame(guesses, word);
 
         }
         private void qClick(object sender, RoutedEventArgs e)
         {
             guesses[16] = 'q';
-            CheckGuess('q', word);
+            CheckGame(guesses, word);
 
         }
         private void rClick(object sender, RoutedEventArgs e)
         {
             guesses[17] = 'r';
-            CheckGuess('r', word);
 
+            CheckGame(guesses, word);
         }
         private void sClick(object sender, RoutedEventArgs e)
         {
             guesses[18] = 's';
-            CheckGuess('s', word);
+            CheckGame(guesses, word);
 
         }
         private void tClick(object sender, RoutedEventArgs e)
         {
             guesses[19] = 't';
-            CheckGuess('t', word);
+            CheckGame(guesses, word);
 
         }
         private void uClick(object sender, RoutedEventArgs e)
         {
             guesses[20] = 'u';
-            CheckGuess('u', word);
+            CheckGame(guesses, word);
 
         }
         private void vClick(object sender, RoutedEventArgs e)
         {
             guesses[21] = 'v';
-            CheckGuess('v', word);
+            CheckGame(guesses, word);
 
         }
         private void wClick(object sender, RoutedEventArgs e)
         {
             guesses[22] = 'w';
-            CheckGuess('w', word);
+            CheckGame(guesses, word);
 
         }
         private void xClick(object sender, RoutedEventArgs e)
         {
             guesses[23] = 'x';
-            CheckGuess('x', word);
+            CheckGame(guesses, word);
 
         }
         private void yClick(object sender, RoutedEventArgs e)
         {
             guesses[24] = 'y';
-            CheckGuess('y', word);
 
+            CheckGame(guesses, word);
         }
         private void zClick(object sender, RoutedEventArgs e)
         {
             guesses[25] = 'z';
-            CheckGuess('z', word);
 
+            CheckGame(guesses, word);
         }
     }
 }

@@ -9,8 +9,8 @@
       Title="HangmanEasy">
 
     <Grid>
-        <Image Source="Images\generichangman.png" Height="200" Width="240" HorizontalAlignment="Left" Margin="480,27,0,223"></Image>
-        <Button Content="A" Height ="55" Width="40" Click="aClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,400,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
+        <Image x:Name="pog" Source="/Images/generichangman.png" Height="200" Width="240" HorizontalAlignment="Left" Margin="480,27,0,223"></Image>
+        <Button x:Name="AButton" Content="A" Height ="55" Width="40" Click="aClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,400,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
         <Button  Content="B" Height ="55" Width="40" Click="bClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,300,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
         <Button Content="C" Height ="55" Width="40" Click="cClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,200,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
         <Button Content="D" Height ="55" Width="40" Click="dClick" FontSize="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Margin="0,250,100,0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Button >
